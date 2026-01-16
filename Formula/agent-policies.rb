@@ -27,7 +27,7 @@ class AgentPolicies < Formula
       By default, this uses the Devleaps hosted policy server at:
          https://agent-policies.devleaps.nl
 
-      You can customize the server https://files.pythonhosted.org/packages/ab/4a/1edc0f67a1af808c187cf2d187df5e370b588dd6e303a30d5b42df80eb3c/devleaps_agent_policies-2.1.0.tar.gz and other settings in:
+      You can customize the server and other settings in:
          ~/.agent-policies/config.json
 
       Documentation: https://github.com/Devleaps/agent-policies
