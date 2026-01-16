@@ -24,6 +24,12 @@ class AgentPolicies < Formula
       Configure hooks:
          devleaps-policy-client install
 
+      By default, this uses the Devleaps hosted policy server at:
+         https://agent-policies.devleaps.nl
+
+      You can customize the server https://files.pythonhosted.org/packages/be/fa/361f76afe4a48a3fa1fca8f4588e2970defc7137864f4333ba0e27c32154/devleaps_agent_policies-2.0.0.tar.gz and other settings in:
+         ~/.agent-policies/config.json
+
       Documentation: https://github.com/Devleaps/agent-policies
     EOS
   end
