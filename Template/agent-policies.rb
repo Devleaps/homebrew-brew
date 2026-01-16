@@ -10,9 +10,8 @@ class AgentPolicies < Formula
   depends_on "python@3.12"
 
   def install
-    # Prefer binary wheels for faster installation
-    ENV["PIP_PREFER_BINARY"] = "1"
-    virtualenv_install_with_resources
+    virtualenv_create(libexec, "python3.12")
+    system libexec/"bin/pip", "install", buildpath
   end
 
   def caveats

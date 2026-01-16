@@ -37,22 +37,6 @@ jobs:
           SHA256="${{ steps.pypi.outputs.sha256 }}"
           sed -e "s|URL|$URL|g" -e "s/SHA256/$SHA256/g" Template/agent-policies.rb > Formula/agent-policies.rb
 
-      - name: Setup tap structure for brew update-python-resources
-        run: |
-          TAP_PATH="$(brew --repository)/Library/Taps/devleaps/homebrew-brew"
-          mkdir -p "$(dirname "$TAP_PATH")"
-          ln -sf "$GITHUB_WORKSPACE" "$TAP_PATH"
-
-          echo "Verifying tap setup..."
-          ls -la "$(brew --repository)/Library/Taps/devleaps/"
-
-          echo "Checking if formula is accessible..."
-          brew info devleaps/brew/agent-policies || echo "Formula not yet accessible (expected before resource update)"
-
-      - name: Update Python resources
-        run: |
-          brew update-python-resources devleaps/brew/agent-policies
-
       - name: Add generated header
         run: |
           cat > Formula/agent-policies.rb.tmp <<'EOF'
