@@ -10,9 +10,8 @@ class AgentPolicies < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", buildpath
-    bin.install_symlink libexec/"bin/devleaps-policy-client"
+    venv = virtualenv_create(libexec, "python3.12")
+    venv.pip_install_and_link buildpath
   end
 
   def caveats
