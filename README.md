@@ -16,7 +16,9 @@ https://github.com/Devleaps/agent-policies
 
 ## Maintainer Guide
 
-Formulae for Python projects are generated from `.template.rb` files, which simplify the `pip` and virtual environment setup of `pip`-installable projects.
+Formulae for Python projects are generated from templates in `Template/`, which simplify the `pip` and virtual environment setup of `pip`-installable projects.
+
+Edit templates in `Template/` - formulae in `Formula/` are auto-generated.
 
 ### Updating for New Releases
 
