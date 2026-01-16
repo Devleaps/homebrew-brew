@@ -17,17 +17,12 @@ class AgentPolicies < Formula
     venv.pip_install_and_link buildpath
   end
 
-  def post_install
-    system bin/"devleaps-policy-client", "install"
-  end
-
-  def pre_uninstall
-    system bin/"devleaps-policy-client", "uninstall"
-  end
-
   def caveats
     <<~EOS
-      Claude Code hooks configured automatically.
+      Quick Start:
+
+      Configure hooks:
+         devleaps-policy-client install
 
       By default, this uses the Devleaps hosted policy server at:
          https://agent-policies.devleaps.nl
