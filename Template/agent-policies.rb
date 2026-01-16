@@ -12,6 +12,7 @@ class AgentPolicies < Formula
   def install
     virtualenv_create(libexec, "python3.12")
     system libexec/"bin/pip", "install", buildpath
+    bin.install_symlink libexec/"bin/devleaps-policy-client"
   end
 
   def caveats
