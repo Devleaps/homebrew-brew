@@ -93,7 +93,8 @@ class AgentPolicies < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    virtualenv_install_with_resources(using: "python@3.12", without_pip: false,
+                                       install_args: ["--only-binary=pydantic-core"])
   end
 
   def caveats
