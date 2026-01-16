@@ -93,8 +93,9 @@ class AgentPolicies < Formula
   end
 
   def install
-    virtualenv_install_with_resources(using: "python@3.12", without_pip: false,
-                                       install_args: ["--only-binary=pydantic-core"])
+    # Prefer binary wheels for faster installation
+    ENV["PIP_PREFER_BINARY"] = "1"
+    virtualenv_install_with_resources
   end
 
   def caveats
