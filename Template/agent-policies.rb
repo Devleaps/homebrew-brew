@@ -24,7 +24,7 @@ class AgentPolicies < Formula
       By default, this uses the Devleaps hosted policy server at:
          https://agent-policies.devleaps.nl
 
-      You can customize the server URL and other settings in:
+      You can customize the server and other settings in:
          ~/.agent-policies/config.json
 
       Documentation: https://github.com/Devleaps/agent-policies
