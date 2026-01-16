@@ -10,8 +10,9 @@ class AgentPolicies < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_install_with_resources(using: "python@3.12", without_pip: false,
-                                       install_args: ["--only-binary=pydantic-core"])
+    # Use binary wheels to avoid Rust compilation for pydantic-core
+    ENV["PIP_ONLY_BINARY"] = "pydantic-core"
+    virtualenv_install_with_resources
   end
 
   def caveats
