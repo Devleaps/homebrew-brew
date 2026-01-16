@@ -6,8 +6,8 @@ class AgentPolicies < Formula
 
   desc "Policy framework for Claude Code and Cursor AI agents"
   homepage "https://github.com/Devleaps/agent-policies"
-  url "https://files.pythonhosted.org/packages/source/d/devleaps-agent-policies/devleaps-agent-policies-1.0.5.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  url "https://files.pythonhosted.org/packages/7e/7d/af0a1e6edbfa140c1a949c60058c11df24576a3459fcf9d6d2b25f707240/devleaps_agent_policies-1.0.5.tar.gz"
+  sha256 "df8ff9f46768099fd540476e35e70075922d72da4169af473bc5a799bab35af9"
   license "MIT"
 
   depends_on "python@3.12"
