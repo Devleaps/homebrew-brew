@@ -53,6 +53,26 @@ jobs:
         run: |
           brew update-python-resources devleaps/brew/agent-policies
 
+      - name: Remove pydantic-core resource (uses binary wheel as dependency)
+        run: |
+          python3 <<'PYTHON'
+          import re
+
+          with open('Formula/agent-policies.rb', 'r') as f:
+              content = f.read()
+
+          # Remove pydantic-core resource block
+          content = re.sub(
+              r'\n  resource "pydantic-core" do\n.*?\n  end\n',
+              '',
+              content,
+              flags=re.DOTALL
+          )
+
+          with open('Formula/agent-policies.rb', 'w') as f:
+              f.write(content)
+          PYTHON
+
       - name: Add generated header
         run: |
           cat > Formula/agent-policies.rb.tmp <<'EOF'
