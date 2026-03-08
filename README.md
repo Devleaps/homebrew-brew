@@ -2,26 +2,15 @@
 
 Official Homebrew tap for Devleaps tools and utilities.
 
-## Installation
-
-```bash
-brew install devleaps/brew/agent-policies
-```
-
 ## Available Formulas
 
-### agent-policies
+No formulas are currently available. The `agent-policies` formula has been removed following the migration to editor-specific plugins:
 
-https://github.com/Devleaps/agent-policies
+- [agent-policies-claude-code](https://github.com/Devleaps/agent-policies-claude-code)
+- [agent-policies-gemini-cli](https://github.com/Devleaps/agent-policies-gemini-cli)
 
 ## Maintainer Guide
 
 Formulae for Python projects are generated from templates in `Template/`, which simplify the `pip` and virtual environment setup of `pip`-installable projects.
 
 Edit templates in `Template/` - formulae in `Formula/` are auto-generated.
-
-### Updating for New Releases
-
-Go to Actions → Update Formula → Run workflow
-
-This updates the formula to the latest PyPI version and commits it.
